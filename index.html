@@ -1,93 +1,94 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasaOS 博客</title>
 
     <style>
         body {
-            font-family: "Helvetica", "Arial", sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fafafa;
+            margin: 0;
+            font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f7f7f7;
             color: #333;
         }
 
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
+        /* 顶部导航栏 */
         nav {
             display: flex;
             justify-content: center;
-            background-color: #ffffff;
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
+            gap: 25px;
+            padding: 18px;
             font-size: 18px;
+            background: rgba(255,255,255,0.85);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
         }
-
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
         nav a:hover {
-            color: #0078ff;
+            color: #4CAF50;
         }
 
-        h1 {
-            font-size: 34px;
-            margin-bottom: 10px;
+        /* 头图 Banner */
+        .hero {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
+            padding: 20px;
+            background: url("https://picsum.photos/1600/800?blur=2") center/cover no-repeat;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: 800;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+            margin-top: 15px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.3);
         }
 
-        p {
-            font-size: 20px;
+        /* 按钮 */
+        .buttons {
+            margin-top: 25px;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            background: #4CAF50;
+            color: white;
+        }
+        .buttons a:hover {
+            background: #43A047;
+        }
+
+        /* 页脚 */
+        footer {
             text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
         }
-        section {
-    margin-top: 30px;
-}
-
-.post-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-}
-
-.post-card h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.post-card .date {
-    color: #666;
-    margin: 6px 0 12px 0;
-}
-
-.readmore {
-    text-decoration: none;
-    font-weight: bold;
-    color: #0078ff;
-}
-.readmore:hover {
-    text-decoration: underline;
-}
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>欢迎来到 CasaOS 的博客</h1>
-        <p>记录、分享、成长</p>
-    </header>
 
     <nav>
         <a href="/">首页</a>
@@ -95,23 +96,18 @@
         <a href="/blog.html">文章</a>
     </nav>
 
-<section>
-    <h2>最新文章</h2>
+    <section class="hero">
+        <h1>CasaOS 博客</h1>
+        <p>记录我的技术成长、开源探索、以及生活感悟。</p>
+        <div class="buttons">
+            <a href="/about.html">了解我</a>
+            <a href="/blog.html">阅读文章</a>
+        </div>
+    </section>
 
-    <div class="post-card">
-        <h3>第一篇文章标题</h3>
-        <p class="date">📅 2025-02-10</p>
-        <p>这里是文章简介内容，例如：这是一篇通过 GitHub Pages 发布的第一篇博客文章。</p>
-        <a class="readmore" href="/article1.html">阅读全文 →</a>
-    </div>
-
-    <div class="post-card">
-        <h3>第二篇文章标题</h3>
-        <p class="date">📅 2025-02-09</p>
-        <p>这是另一篇文章的简介，用于测试布局。</p>
-        <a class="readmore" href="/article2.html">阅读全文 →</a>
-    </div>
-</section>
+    <footer>
+        © 2025 CasaOS Blog — Powered by GitHub Pages
+    </footer>
 
 </body>
 </html>

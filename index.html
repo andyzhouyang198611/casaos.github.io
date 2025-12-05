@@ -2,27 +2,68 @@
 <head>
     <meta charset="UTF-8" />
     <title>CasaOS 博客</title>
+
     <style>
-        nav {
-            background-color: #f5f5f5;
-            padding: 10px;
+        body {
+            font-family: "Helvetica", "Arial", sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
         }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         nav a {
-            margin-right: 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
             color: #333;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #0078ff;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>欢迎来到 CasaOS 的博客</h1>
+        <p>记录、分享、成长</p>
+    </header>
+
     <nav>
         <a href="/">首页</a>
         <a href="/about.html">关于</a>
         <a href="/blog.html">文章</a>
     </nav>
 
-    <h1>欢迎来到 CasaOS 的博客</h1>
-    <p>这是通过 GitHub Pages 托管的静态网站。</p>
-</body>
-</html>
+    <section>
+        <p>这是通过 GitH

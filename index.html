@@ -97,20 +97,13 @@
 
 <section>
     <h2>最新文章</h2>
-
-    <div class="post-card">
-        <h3>第一篇文章标题</h3>
-        <p class="date">📅 2025-02-10</p>
-        <p>这里是文章简介内容，例如：这是一篇通过 GitHub Pages 发布的第一篇博客文章。</p>
-        <a class="readmore" href="/article1.html">阅读全文 →</a>
-    </div>
-
-    <div class="post-card">
-        <h3>第二篇文章标题</h3>
-        <p class="date">📅 2025-02-09</p>
-        <p>这是另一篇文章的简介，用于测试布局。</p>
-        <a class="readmore" href="/article2.html">阅读全文 →</a>
-    </div>
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%Y-%m-%d" }}
+        </li>
+        {% endfor %}
+    </ul>
 </section>
 </body>
 </html>
